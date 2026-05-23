@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checker</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex justify-center h-screen">
+
+  <div class="text-center">
+
+    <table class="border border-[#000] ">
+
+        <caption class="mb-2">Last Update : <span id="date"><span></caption>
+
+        <thead class="[&>tr>th]:border [&>tr>th]:border-black [&>tr>th]:py-1.5 [&>tr>th]:px-1 [&>tr>th]:uppercase">
+            <tr class="[&>th]:text-xs">
+                <th>name</th>
+                <th>amount</th>
+                <th>20%</th>
+                <th>total</th>
+                <th>balance</th>
+                <th>date</th>
+
+            </tr>
+        </thead>
+
+        <tbody class="[&>tr>td]:border [&>tr>td]:border-black [&>tr>td]:py-1.5 [&>tr>td]:px-1 [&>tr>td]:uppercase"></tbody>
+
+    </table>
+
+  </div>
+
+
+<script>
+fetch('./export.json')
+    .then(res => res.json())
+    .then(data => {
+        
+        document.getElementById("date").innerText =  data.generated_at;
+        const tbody = document.querySelector("table tbody");
+
+        data.posts.forEach(post => {
+            const row = `
+                <tr class="[&>td]:text-xs">
+                    <td class="text-[10px]">${post.name}</td>
+                    <td class="text-right">${post.amount}</td>
+                    <td class="text-right">${post.amount_interest}</td>
+                    <td class="text-right">${post.total_payment}</td>
+                    <td class="text-right">${post.remaining}</td>
+                    <td>${post.date}</td>
+                </tr>
+            `;
+
+            tbody.innerHTML += row;
+        });
+    })
+    .catch(err => console.error("Error loading JSON:", err));
+</script>
+
+</body>
+</html>
