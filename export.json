@@ -1,12 +1,12 @@
 {
-    "generated_at": "2026-05-25 15:21:07",
+    "generated_at": "2026-05-26 03:52:44",
     "posts": [
         {
             "name": "Mila",
             "amount": "\u20b15,000",
             "amount_interest": "\u20b16,000",
-            "total_payment": "\u20b10",
-            "remaining": "\u20b16,000",
+            "total_payment": "\u20b11,000",
+            "remaining": "\u20b15,000",
             "date": "05-16-26"
         },
         {
@@ -21,8 +21,8 @@
             "name": "Rechel",
             "amount": "\u20b110,000",
             "amount_interest": "\u20b112,000",
-            "total_payment": "\u20b10",
-            "remaining": "\u20b112,000",
+            "total_payment": "\u20b12,500",
+            "remaining": "\u20b19,500",
             "date": "05-09-26"
         },
         {
