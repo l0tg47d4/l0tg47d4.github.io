@@ -1,5 +1,5 @@
 {
-    "generated_at": "2026-06-04 11:29:09",
+    "generated_at": "2026-06-08 07:28:42",
     "posts": [
         {
             "name": "Mila",
@@ -13,8 +13,8 @@
             "name": "Jasmin",
             "amount": "\u20b15,000",
             "amount_interest": "\u20b16,000",
-            "total_payment": "\u20b11,500",
-            "remaining": "\u20b14,500",
+            "total_payment": "\u20b13,000",
+            "remaining": "\u20b13,000",
             "date": "05-16-26"
         },
         {
